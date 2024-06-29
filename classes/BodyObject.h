@@ -14,7 +14,17 @@ class BodyObject {
 public:
 
     BodyObject(int, int , Position , QGraphicsPixmapItem *image);
+    QGraphicsPixmapItem * getimage(){
+        return image;
+    }
+    BodyObject();
     virtual void draw(QGraphicsScene &scene) = 0;
+    Position getpos();
+    void setpos(Position);
+    int getwidth();
+    void setwidth(int);
+    int getheight();
+    void setheight(int);
 };
 
 #endif //AMIN_DOPINGI_GAME_BODYOBJECT_H
