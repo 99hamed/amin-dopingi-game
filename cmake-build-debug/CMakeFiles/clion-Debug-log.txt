@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S "C:\Users\Hamed\Desktop\amin dopingi game" -B "C:\Users\Hamed\Desktop\amin dopingi game\cmake-build-debug"
+"C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\Hamed\Desktop\amin-dopingi-game -B C:\Users\Hamed\Desktop\amin-dopingi-game\cmake-build-debug
 -- The C compiler identification is GNU 13.1.0
 -- The CXX compiler identification is GNU 13.1.0
 -- Detecting C compiler ABI info
@@ -18,6 +18,6 @@
 -- Performing Test HAVE_STDATOMIC - Success
 -- Found WrapAtomic: TRUE  
 -- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR) 
--- Configuring done (2.2s)
--- Generating done (0.0s)
--- Build files have been written to: C:/Users/Hamed/Desktop/amin dopingi game/cmake-build-debug
+-- Configuring done (3.5s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/Hamed/Desktop/amin-dopingi-game/cmake-build-debug
