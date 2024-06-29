@@ -10,6 +10,11 @@
     public:
         Position();
         Position(int,int);
+        int getx();
+        void setx(int);
+        int gety();
+        void sety(int);
+
     };
 
 
