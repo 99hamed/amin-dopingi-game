@@ -1,0 +1,12 @@
+
+#ifndef AMIN_DOPINGI_GAME_PLATFORM_H
+#define AMIN_DOPINGI_GAME_PLATFORM_H
+
+
+
+class platform{
+
+};
+
+
+#endif //AMIN_DOPINGI_GAME_PLATFORM_H
