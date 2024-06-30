@@ -242,12 +242,6 @@
 			null
 		],
 		[
-			"C:/Users/Hamed/Desktop/amin-dopingi-game/classes/Platform.h",
-			"MU",
-			"QESDO5J2AP/moc_Platform.cpp",
-			null
-		],
-		[
 			"C:/Users/Hamed/Desktop/amin-dopingi-game/classes/Position.h",
 			"MU",
 			"QESDO5J2AP/moc_Position.cpp",
@@ -337,11 +331,6 @@
 		],
 		[
 			"C:/Users/Hamed/Desktop/amin-dopingi-game/classes/Game.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Hamed/Desktop/amin-dopingi-game/classes/Platform.cpp",
 			"MU",
 			null
 		],
