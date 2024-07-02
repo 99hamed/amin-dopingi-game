@@ -1,14 +1,19 @@
+#ifndef PLATFORM_H
+#define PLATFORM_H
 
-#ifndef AMIN_DOPINGI_GAME_PLATFORM_H
-#define AMIN_DOPINGI_GAME_PLATFORM_H
+#include "BodyObject.h"
 
-#include <QGraphicsPixmapItem>
-
-class platform : public QGraphicsPixmapItem {
-
+class Platform : public BodyObject {
 public:
-    platform(int screenWidth , int screenHeigth );
+    Platform(int width, int height, Position position, QGraphicsPixmapItem* image = nullptr)
+            : BodyObject(width, height, position, image) {}
 
+    void draw(QGraphicsScene& scene) override {
+        if (image) {
+            image->setPos(position.x, position.y);
+            scene.addItem(image);
+        }
+    }
 };
 
-#endif //AMIN_DOPINGI_GAME_PLATFORM_H
+#endif // PLATFORM_H
