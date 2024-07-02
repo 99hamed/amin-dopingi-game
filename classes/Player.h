@@ -9,26 +9,31 @@
 #include<QList>
 #include<QTimer>
 #include<QObject>
-
-
+#include<QPropertyAnimation>
+#include<QKeyEvent>
     class Player :public QObject,public BodyObject,public QGraphicsPixmapItem {
-        Q_OBJECT
-        private:
+    Q_OBJECT
+
+        Q_PROPERTY(qreal width READ x WRITE setX)
+    private:
         int frame{};
-        QList<QPixmap*> frames{};
-        QTimer* runningtimer;
-        public:
+        QList<QPixmap *> frames{};
+        QTimer *runningtimer;
+        QPropertyAnimation* widthAnimator;
+    public:
         int speed;
         Position velocity;
 
-        Player(int,int ,Position ,int,Position, QGraphicsPixmapItem *image = nullptr);
-        Player(int ,int,QGraphicsItem* parent= nullptr);
+        Player(int, int, Position, int, Position, QGraphicsPixmapItem *image = nullptr);
 
+        Player(int, int, QGraphicsItem *parent = nullptr);
 
 
         void handleGravity();
 
         void handleLeftMovement();
+
+        void handleRightMovement();
 
         void handleUpMovement();
 
@@ -38,13 +43,19 @@
 
         void handleMovement();
 
+        void Running();
 
         void draw(QGraphicsScene &scene) override;
-public slots:
-        void handleRightMovement();
+
+    protected:
+        void keyPressEvent(QKeyEvent *event) override;
 
 
-};
+
+
+
+    };
+
 
 
 #endif //AMIN_DOPINGI_GAME_PLAYER_H
