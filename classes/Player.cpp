@@ -7,25 +7,36 @@ Player::Player(int width, int height, Position position, int speed, Position vel
 
 Player::Player(int width,int height,QGraphicsItem* parent): QGraphicsPixmapItem(parent)
         {
+    setFlags(GraphicsItemFlag::ItemIsFocusable );
+    setFocus();
 
-    auto pixmap =new QPixmap (":/resources/images/spriteStandRight.png");
-    auto scaledpixmap=pixmap->scaled(89.5,196.5);
+            auto pixmap =new QPixmap (":/resources/images/spriteStandRight.png");
+            auto scaledpixmap=pixmap->scaled(89.5,196.5);
 
-    setPixmap(scaledpixmap);
+            setPixmap(scaledpixmap);
 
-    frames.append(new QPixmap(scaledpixmap));
-    pixmap=new QPixmap(":/resources/images/spriteRunRight.png");
-    scaledpixmap=pixmap->scaled(5000,200);
+            frames.append(new QPixmap(scaledpixmap));
+            pixmap=new QPixmap(":/resources/images/spriteRunRight.png");
+            scaledpixmap=pixmap->scaled(5000,200);
 
-    scaledpixmap = scaledpixmap.copy(0, 0, pixmap->width() - 10050 , pixmap->height());
-    frames.append(new QPixmap(scaledpixmap));
+            scaledpixmap = scaledpixmap.copy(0, 0, pixmap->width() - 10050 , pixmap->height());
+            frames.append(new QPixmap(scaledpixmap));
 
-    runningtimer= new QTimer();
-    runningtimer->setInterval(300);
-    connect(runningtimer,&QTimer::timeout,this,&Player::handleRightMovement);
-    runningtimer->start();
+            runningtimer= new QTimer();
+            runningtimer->setInterval(300);
+            connect(runningtimer,&QTimer::timeout,this,&Player::Running);
+            runningtimer->start();
 
-    setPos(100,height/2-pixmap->height()/2);
+            setPixmap(scaledpixmap);
+
+
+
+    auto x=100;
+    auto y=height/2-pixmap->height()/2;
+
+  widthAnimator= new QPropertyAnimation(this,"width",this);
+
+  setPos(x,y);
 
 
 }
@@ -37,6 +48,29 @@ void Player::draw(QGraphicsScene &scene)  {
 }
 
 void Player::handleRightMovement(){
+
+    widthAnimator->stop();
+    widthAnimator->setStartValue(x());
+    widthAnimator->setEndValue(x()+300);
+    widthAnimator->setDuration(500);
+    widthAnimator->start();
+
+
+
+}
+void Player::Running(){
+
     setPixmap(*frames.at(frame));
     frame=(frame+1)%2;
+
 }
+
+void Player::keyPressEvent(QKeyEvent *event)   {
+    QGraphicsItem::keyPressEvent(event);
+
+    if(event->key()==Qt::Key::Key_Right){
+        handleRightMovement();
+    }
+
+}
+
