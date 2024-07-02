@@ -3,5 +3,6 @@
     <qresource prefix="/images">
         <file>resources/background.png</file>
         <file>resources/hills.png</file>
+        <file>resources/platform.png</file>
     </qresource>
     </RCC>
