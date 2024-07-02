@@ -5,6 +5,7 @@
 Game::Game(){
     showFullScreen();
 
+
     auto scene = new QGraphicsScene();
 
     scene->setSceneRect(0,0,QWidget::width(),QWidget::height());
@@ -20,9 +21,13 @@ Game::Game(){
     background2->setPos(10,10);
     setScene(scene);
 
-    Position platformPos = {100, 500};
-    Platform platform(200, 20, platformPos, new QGraphicsPixmapItem(QPixmap(":/images/platform.png")));
-
-
+    PlatformGeneratorTimer = new QTimer();
+    PlatformGeneratorTimer->setInterval(2000);
+    connct(PlatformGeneratorTimer , &QTimer::timeout , this , &game::addPlatform);
+    PlatformGeneratorTimer->start();
 
 }
+
+void game::addPlatform() {
+    auto Platform = new Platform(playgroundScene->width() , playgroundScene->height());
+    playgroundScene->addItem(Platform);

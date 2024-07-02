@@ -2,18 +2,27 @@
 #define PLATFORM_H
 
 #include "BodyObject.h"
+#include <QGraphicsPixmapItem>
+#include <QPropertyAnimation>
+#include <QObject>
 
-class Platform : public BodyObject {
+class Platform : public BodyObject , public QGraphicsPixmapItem , public QObject {
+    Q_OBJECT
+    Q_PROPERTY(greal x READ x WRITE setX)
+
+
+private:
+    QPropertyAnimation* moveAnimator;
+
 public:
-    Platform(int width, int height, Position position, QGraphicsPixmapItem* image = nullptr)
-            : BodyObject(width, height, position, image) {}
+    platform(int SceneWidth , int SceneHeight);
+    ~platform();
 
-    void draw(QGraphicsScene& scene) override {
-        if (image) {
-            image->setPos(position.x, position.y);
-            scene.addItem(image);
-        }
-    }
+public slots:
+
+    void removePlatform();
+
+
 };
 
 #endif // PLATFORM_H

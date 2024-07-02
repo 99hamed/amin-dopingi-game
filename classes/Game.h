@@ -5,12 +5,18 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsPixmapItem>
+#include <QTimer>
 
 class Game:public QGraphicsScene,public QGraphicsView {
+Q_OBJECT
+
+private:
+    QTimer* PlatformGeneratorTimer;
 
     public:
     Game();
-
+public slots:
+    void addPlatform();
 
 };
 
