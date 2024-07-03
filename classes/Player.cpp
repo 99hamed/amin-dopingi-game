@@ -10,33 +10,40 @@ Player::Player(int width,int height,QGraphicsItem* parent): QGraphicsPixmapItem(
     setFlags(GraphicsItemFlag::ItemIsFocusable );
     setFocus();
 
-            auto pixmap =new QPixmap (":/resources/images/spriteStandRight.png");
-            auto scaledpixmap=pixmap->scaled(89.5,196.5);
+    auto pixmap =new QPixmap (":/resources/images/spriteStandRight.png");
+    auto scaledpixmap=pixmap->scaled(89.5,196.5);
 
-            setPixmap(scaledpixmap);
+    setPixmap(scaledpixmap);
 
-            frames.append(new QPixmap(scaledpixmap));
-            pixmap=new QPixmap(":/resources/images/spriteRunRight.png");
-            scaledpixmap=pixmap->scaled(5000,200);
+    frames.append(new QPixmap(scaledpixmap));
+    pixmap=new QPixmap(":/resources/images/spriteRunRight.png");
+    scaledpixmap=pixmap->scaled(5000,200);
 
-            scaledpixmap = scaledpixmap.copy(0, 0, pixmap->width() - 10050 , pixmap->height());
-            frames.append(new QPixmap(scaledpixmap));
+    scaledpixmap = scaledpixmap.copy(0, 0, pixmap->width() - 10050 , pixmap->height());
+    frames.append(new QPixmap(scaledpixmap));
 
-            runningtimer= new QTimer();
-            runningtimer->setInterval(300);
-            connect(runningtimer,&QTimer::timeout,this,&Player::Running);
-            runningtimer->start();
+    runningtimer= new QTimer();
+    runningtimer->setInterval(300);
+    connect(runningtimer,&QTimer::timeout,this,&Player::Running);
+    runningtimer->start();
 
-            setPixmap(scaledpixmap);
+    //setPixmap(scaledpixmap);
 
 
 
     auto x=100;
     auto y=height/2-pixmap->height()/2;
+    ground=height-200;
+    widthAnimator= new QPropertyAnimation(this,"width",this);
+    heightAnimator= new QPropertyAnimation(this,"height",this);
 
-  widthAnimator= new QPropertyAnimation(this,"width",this);
+    heightAnimator->setStartValue(ground);
+    heightAnimator->setEndValue(ground);
+    heightAnimator->setDuration(200);
+    heightAnimator->start();
+    connect(heightAnimator,&QPropertyAnimation::finished,this,&Player::handleGravity);
 
-  setPos(x,y);
+    setPos(x,y);
 
 
 }
@@ -49,27 +56,66 @@ void Player::draw(QGraphicsScene &scene)  {
 
 void Player::handleRightMovement(){
 
+    auto pixmap =new QPixmap (":/resources/images/spriteStandRight.png");
+    auto scaledpixmap=pixmap->scaled(89.5,196.5);
+    setPixmap(scaledpixmap);
     widthAnimator->stop();
     widthAnimator->setStartValue(x());
-    widthAnimator->setEndValue(x()+300);
-    widthAnimator->setDuration(500);
+    widthAnimator->setEndValue(x()+20);
+    widthAnimator->setDuration(50);
     widthAnimator->start();
 
+}
+void Player::handleLeftMovement() {
+    auto pixmap =new QPixmap (":/resources/images/spriteStandLeft.png");
+    auto scaledpixmap=pixmap->scaled(89.5,196.5);
+    setPixmap(scaledpixmap);
+    widthAnimator->stop();
+    widthAnimator->setStartValue(x());
+    widthAnimator->setEndValue(x()-20);
+    widthAnimator->setDuration(50);
+    widthAnimator->start();
 
+}
+void Player::handleUpMovement() {
+
+    heightAnimator->stop();
+    heightAnimator->setStartValue(y());
+    heightAnimator->setEndValue(y()-200);
+    heightAnimator->setDuration(500);
+    heightAnimator->start();
 
 }
 void Player::Running(){
 
-    setPixmap(*frames.at(frame));
-    frame=(frame+1)%2;
+//    setPixmap(*frames.at(frame));
+//    frame=(frame+1)%2;
 
 }
+void Player::handleGravity() {
 
-void Player::keyPressEvent(QKeyEvent *event)   {
+    heightAnimator->stop();
+    heightAnimator->setStartValue(y());
+    heightAnimator->setEndValue(ground);
+    heightAnimator->setDuration(1000);
+    heightAnimator->setEasingCurve(QEasingCurve::InOutCubic);
+    heightAnimator->start();
+
+
+
+}
+void Player::keyPressEvent(QKeyEvent *event){
     QGraphicsItem::keyPressEvent(event);
 
-    if(event->key()==Qt::Key::Key_Right){
+    if (event->key() == Qt::Key::Key_Right) {
         handleRightMovement();
+    }
+    if (event->key() == Qt::Key::Key_Left) {
+        handleLeftMovement();
+    }
+
+    if (event->key() == Qt::Key::Key_Up || event->key() == Qt::Key::Key_Space) {
+        handleUpMovement();
     }
 
 }
