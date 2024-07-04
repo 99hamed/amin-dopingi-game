@@ -7,16 +7,16 @@
 #include <QObject>
 
 class Platform : public BodyObject , public QGraphicsPixmapItem , public QObject {
-    Q_OBJECT
-    Q_PROPERTY(greal x READ x WRITE setX)
+Q_OBJECT
+    Q_PROPERTY(qreal x READ x WRITE setX)
 
 
 private:
     QPropertyAnimation* moveAnimator;
 
 public:
-    platform(int SceneWidth , int SceneHeight);
-    ~platform();
+    Platform(int SceneWidth, int SceneHeight, QObject *parent = nullptr);
+    ~Platform();
 
 public slots:
 

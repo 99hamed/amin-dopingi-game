@@ -1,28 +1,22 @@
 
 
-#ifndef GAME_H
-#define GAME_H
+#ifndef AMIN_DOPINGI_GAME_GAME_H
+#define AMIN_DOPINGI_GAME_GAME_H
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsPixmapItem>
 #include <QTimer>
-#include"Decorator.h"
-#include"Player.h"
 
-class Game:public QGraphicsView{
+class Game:public QGraphicsScene,public QGraphicsView {
 Q_OBJECT
 
-
+private:
     QTimer* PlatformGeneratorTimer;
-    QGraphicsScene *scene;
-    QGraphicsView *view;
-    //Platform *platform;
-    QGraphicsPixmapItem *object;
-    QTimer *timer;
-public:
+
     public:
     Game();
-
+public slots:
+    void addPlatform();
 
 };
 
