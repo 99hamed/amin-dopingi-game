@@ -14,7 +14,21 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(amin_dopingi_game main.cpp)
+add_executable(amin_dopingi_game main.cpp resources.qrc
+        classes/Position.h
+        classes/Position.cpp
+        classes/BodyObject.h
+        classes/BodyObject.cpp
+        classes/Decorator.h
+        classes/Decorator.cpp
+        classes/Game.h resources.qrc
+        classes/Game.cpp
+        classes/Player.h
+        classes/Player.cpp
+        classes/platform.h
+        classes/platform.cpp
+
+)
 target_link_libraries(amin_dopingi_game
         Qt::Core
         Qt::Gui

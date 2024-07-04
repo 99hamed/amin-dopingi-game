@@ -11,15 +11,20 @@
 #include<QObject>
 #include<QPropertyAnimation>
 #include<QKeyEvent>
+
     class Player :public QObject,public BodyObject,public QGraphicsPixmapItem {
     Q_OBJECT
 
         Q_PROPERTY(qreal width READ x WRITE setX)
+        Q_PROPERTY(qreal height READ y WRITE setY)
     private:
-        int frame{};
+    int ground{};
+    int frame{};
         QList<QPixmap *> frames{};
         QTimer *runningtimer;
+
         QPropertyAnimation* widthAnimator;
+        QPropertyAnimation* heightAnimator;
     public:
         int speed;
         Position velocity;
@@ -29,30 +34,26 @@
         Player(int, int, QGraphicsItem *parent = nullptr);
 
 
-        void handleGravity();
-
         void handleLeftMovement();
 
         void handleRightMovement();
 
         void handleUpMovement();
 
-
         void handleDownMovement();
 
 
-        void handleMovement();
-
-        void Running();
 
         void draw(QGraphicsScene &scene) override;
 
-    protected:
-        void keyPressEvent(QKeyEvent *event) override;
 
 
+       void keyPressEvent(QKeyEvent*) override ;
 
 
+public slots:
+        void handleGravity();
+        void Running();
 
     };
 
