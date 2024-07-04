@@ -6,7 +6,7 @@ Player::Player(int width, int height, Position position, int speed, Position vel
 
 
 Player::Player(int width,int height,QGraphicsItem* parent): QGraphicsPixmapItem(parent)
-        {
+{
     setFlags(GraphicsItemFlag::ItemIsFocusable );
     setFocus();
 
@@ -15,17 +15,24 @@ Player::Player(int width,int height,QGraphicsItem* parent): QGraphicsPixmapItem(
 
     setPixmap(scaledpixmap);
 
-    frames.append(new QPixmap(scaledpixmap));
-    pixmap=new QPixmap(":/resources/images/spriteRunRight.png");
-    scaledpixmap=pixmap->scaled(5000,200);
+//    frames.append(new QPixmap(scaledpixmap));
+//    pixmap=new QPixmap(":/resources/images/spriteRunRight.png");
+//    scaledpixmap=pixmap->scaled(5000,200);
+//
+//    scaledpixmap = scaledpixmap.copy(0, 0, pixmap->width() - 10050 , pixmap->height());
+//    frames.append(new QPixmap(scaledpixmap));
+    mSpriteSheet = QPixmap(":/resources/images/spriteRunRight.png");
+   mSpriteSheet=mSpriteSheet.scaled(5000,196.5);
+    mFrameWidth = mSpriteSheet.width() / 29.9; // Assuming 10 frames
+    mFrameHeight = mSpriteSheet.height();
 
-    scaledpixmap = scaledpixmap.copy(0, 0, pixmap->width() - 10050 , pixmap->height());
-    frames.append(new QPixmap(scaledpixmap));
+    // Initial frame
+    setPixmap(mSpriteSheet.copy(0, 0, mFrameWidth, mFrameHeight));
 
-    runningtimer= new QTimer();
-    runningtimer->setInterval(300);
-    connect(runningtimer,&QTimer::timeout,this,&Player::Running);
-    runningtimer->start();
+    runningTimer = new QTimer(this);
+    runningTimer->setInterval(100);
+    connect(runningTimer, &QTimer::timeout, this, &Player::updateFrame);
+    runningTimer->start();
 
     //setPixmap(scaledpixmap);
 
@@ -56,9 +63,9 @@ void Player::draw(QGraphicsScene &scene)  {
 
 void Player::handleRightMovement(){
 
-    auto pixmap =new QPixmap (":/resources/images/spriteStandRight.png");
-    auto scaledpixmap=pixmap->scaled(89.5,196.5);
-    setPixmap(scaledpixmap);
+//    auto pixmap =new QPixmap (":/resources/images/spriteStandRight.png");
+//    auto scaledpixmap=pixmap->scaled(89.5,196.5);
+//    setPixmap(scaledpixmap);
     widthAnimator->stop();
     widthAnimator->setStartValue(x());
     widthAnimator->setEndValue(x()+20);
@@ -67,9 +74,9 @@ void Player::handleRightMovement(){
 
 }
 void Player::handleLeftMovement() {
-    auto pixmap =new QPixmap (":/resources/images/spriteStandLeft.png");
-    auto scaledpixmap=pixmap->scaled(89.5,196.5);
-    setPixmap(scaledpixmap);
+//    auto pixmap =new QPixmap (":/resources/images/spriteStandLeft.png");
+//    auto scaledpixmap=pixmap->scaled(89.5,196.5);
+//    setPixmap(scaledpixmap);
     widthAnimator->stop();
     widthAnimator->setStartValue(x());
     widthAnimator->setEndValue(x()-20);
@@ -86,11 +93,11 @@ void Player::handleUpMovement() {
     heightAnimator->start();
 
 }
-void Player::Running(){
+void Player::updateFrame(){
 
-//    setPixmap(*frames.at(frame));
-//    frame=(frame+1)%2;
-
+    mCurrentFrame = (mCurrentFrame + 1) % 30; // Assuming 10 frames
+    int x = mCurrentFrame * mFrameWidth;
+    setPixmap(mSpriteSheet.copy(x, 0, mFrameWidth, mFrameHeight));
 }
 void Player::handleGravity() {
 
@@ -118,5 +125,17 @@ void Player::keyPressEvent(QKeyEvent *event){
         handleUpMovement();
     }
 
+}
+void Player::keyReleaseEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Right || event->key() == Qt::Key_Left) {
+        QPixmap standingPixmap(":/resources/images/spriteStandRight.png");
+        setPixmap(standingPixmap.scaled(89.5, 196.5)); // ;
+    }
+    if ( event->key() == Qt::Key_Left) {
+        QPixmap standingPixmap(":/resources/images/spriteStandLeft.png");
+        setPixmap(standingPixmap.scaled(89.5, 196.5)); // ;
+    }
+    QGraphicsItem::keyReleaseEvent(event);
 }
 
