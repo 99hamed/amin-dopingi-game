@@ -25,8 +25,7 @@ add_executable(amin_dopingi_game main.cpp resources.qrc
         classes/Game.cpp
         classes/Player.h
         classes/Player.cpp
-        classes/platform.h
-        classes/platform.cpp
+
 
 )
 target_link_libraries(amin_dopingi_game
