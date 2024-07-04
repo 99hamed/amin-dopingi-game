@@ -8,8 +8,14 @@
 	"INCLUDE_DIR" : "C:/Users/Hamed/Desktop/amin-dopingi-game/cmake-build-debug/amin_dopingi_game_autogen/include",
 	"INPUTS" : 
 	[
+		"C:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/platform.png",
+		"C:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/platformSmallTall.png",
 		"C:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/background.png",
-		"C:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/hills.png"
+		"C:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/spriteRunRight.png",
+		"C:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/spriteStandRight.png",
+		"C:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/spriteRunLeft.png",
+		"C:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/hills.png",
+		"C:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/spriteStandLeft.png"
 	],
 	"LOCK_FILE" : "C:/Users/Hamed/Desktop/amin-dopingi-game/cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,
