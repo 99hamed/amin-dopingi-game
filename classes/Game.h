@@ -8,7 +8,7 @@
 #include <QTimer>
 #include"Decorator.h"
 #include"Player.h"
-#include"platform.h"
+
 class Game:public QGraphicsView{
 Q_OBJECT
 

@@ -29,17 +29,17 @@ Game::Game() {
     auto player = new Player( QWidget::width(),QWidget::height());
     scene->addItem(player);
 
-
-    QPixmap platformPixmap(":/resources/images/platform.png");
-    auto platform = new Platform(platformPixmap);
-    scene->addItem(platform);
-    platform->setPos(0, (scene->height()/2)+100);
-
-
-
-    object = new QGraphicsPixmapItem(QPixmap(":/resources/images/platform.png"));
-    object->setPos(579, (scene->height()/2)+100);
-    scene->addItem(object);
+//
+//    QPixmap platformPixmap(":/resources/images/platform.png");
+//    auto platform = new Platform(platformPixmap);
+//    scene->addItem(platform);
+//    platform->setPos(0, (scene->height()/2)+100);
+//
+//
+//
+//    object = new QGraphicsPixmapItem(QPixmap(":/resources/images/platform.png"));
+//    object->setPos(579, (scene->height()/2)+100);
+//    scene->addItem(object);
 
   setScene(scene);
     // Setup the view
