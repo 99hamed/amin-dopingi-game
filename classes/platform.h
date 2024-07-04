@@ -8,7 +8,7 @@
 
 class Platform : public BodyObject , public QGraphicsPixmapItem , public QObject {
 Q_OBJECT
-    Q_PROPERTY(greal x READ x WRITE setX)
+    Q_PROPERTY(qreal x READ x WRITE setX)
 
 
 private:
