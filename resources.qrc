@@ -1,8 +1,13 @@
 <RCC>
 
-    <qresource prefix="/images">
-        <file>resources/background.png</file>
-        <file>resources/hills.png</file>
-        <file>resources/platform.png</file>
+    <qresource prefix="/">
+        <file>resources/images/background.png</file>
+        <file>resources/images/hills.png</file>
+        <file>resources/images/spriteRunRight.png</file>
+        <file>resources/images/spriteRunLeft.png</file>
+        <file>resources/images/spriteStandRight.png</file>
+        <file>resources/images/spriteStandLeft.png</file>
+        <file>resources/images/platform.png</file>
+        <file>resources/images/platformSmallTall.png</file>
     </qresource>
     </RCC>
