@@ -17,7 +17,7 @@ Game::Game() {
     scene->addItem(background2);
 
     player = new Player(QWidget::width(), QWidget::height());
-    player->speed = 30; // افزایش سرعت بازیکن
+    player->speed = 30; // player speed
     scene->addItem(player);
 
     setScene(scene);
@@ -31,7 +31,6 @@ void Game::updateScene() {
     int middleX = scene->width() / 2;
     int playerX = player->x();
 
-    // Calculate the difference
     int dx = 0;
     if (playerX > middleX) {
         dx = playerX - middleX;
@@ -40,9 +39,8 @@ void Game::updateScene() {
     }
 
     if (dx != 0) {
-        int backgroundSpeed = dx / 4; // کاهش سرعت اسکرول بک گراند
+        int backgroundSpeed = dx / 4; // scroll speed
 
-        // Move the scene and background
         scene->setSceneRect(scene->sceneRect().x() + dx, 0, scene->width(), scene->height());
         background->updatePosition(background->x() - backgroundSpeed, background->y());
         background2->updatePosition(background2->x() - backgroundSpeed, background2->y());

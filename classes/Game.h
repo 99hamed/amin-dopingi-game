@@ -24,7 +24,7 @@ public:
     Game();
 
 public slots:
-    void updateScene();  // New method for updating the scene
+    void updateScene();
 };
 
 #endif // GAME_H
