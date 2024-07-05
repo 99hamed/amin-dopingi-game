@@ -6,7 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(CMAKE_PREFIX_PATH "C:/Qt/6.7.1/mingw_64")
+set(CMAKE_PREFIX_PATH "C:/Qt/6.7.2/mingw_64")
 
 find_package(Qt6 COMPONENTS
         Core
@@ -15,19 +15,16 @@ find_package(Qt6 COMPONENTS
         REQUIRED)
 
 add_executable(amin_dopingi_game main.cpp resources.qrc
-        classes/Position.h
         classes/Position.cpp
-        classes/BodyObject.h
+        classes/Position.h
         classes/BodyObject.cpp
-        classes/Decorator.h
-        classes/Decorator.cpp
-        classes/Game.h resources.qrc
+        classes/BodyObject.h
         classes/Game.cpp
-        classes/Player.h
+        classes/Game.h
         classes/Player.cpp
-        classes/platform.h
-        classes/platform.cpp
-
+        classes/Player.h
+        classes/Decorator.cpp
+        classes/Decorator.h
 )
 target_link_libraries(amin_dopingi_game
         Qt::Core
