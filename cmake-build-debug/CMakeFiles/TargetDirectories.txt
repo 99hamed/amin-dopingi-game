@@ -1,5 +1,0 @@
-C:/Users/Hamed/Desktop/amin-dopingi-game/cmake-build-debug/CMakeFiles/amin_dopingi_game.dir
-C:/Users/Hamed/Desktop/amin-dopingi-game/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Hamed/Desktop/amin-dopingi-game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/Hamed/Desktop/amin-dopingi-game/cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen_timestamp_deps.dir
-C:/Users/Hamed/Desktop/amin-dopingi-game/cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen.dir
