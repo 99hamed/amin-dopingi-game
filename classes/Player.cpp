@@ -52,7 +52,7 @@ void Player::handleRightMovement() {
     setPixmap(scaledpixmap);
     widthAnimator->stop();
     widthAnimator->setStartValue(x());
-    widthAnimator->setEndValue(x() + speed); // افزایش سرعت بازیکن
+    widthAnimator->setEndValue(x() + speed); // player speed +
     widthAnimator->setDuration(50);
     widthAnimator->start();
 }
@@ -63,7 +63,7 @@ void Player::handleLeftMovement() {
     setPixmap(scaledpixmap);
     widthAnimator->stop();
     widthAnimator->setStartValue(x());
-    widthAnimator->setEndValue(x() - speed); // افزایش سرعت بازیکن
+    widthAnimator->setEndValue(x() - speed); // player speed +
     widthAnimator->setDuration(50);
     widthAnimator->start();
 }

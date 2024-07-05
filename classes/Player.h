@@ -42,7 +42,6 @@ public:
     void handleDownMovement();
 
 
-
     void draw(QGraphicsScene &scene) override;
 
 
