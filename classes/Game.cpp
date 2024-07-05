@@ -20,11 +20,23 @@ Game::Game() {
     player->speed = 30; // player speed
     scene->addItem(player);
 
+    //    QPixmap platformPixmap(":/resources/images/platform.png");
+//    auto platform = new Platform(platformPixmap);
+//    scene->addItem(platform);
+//    platform->setPos(0, (scene->height()/2)+100);
+//
+
     setScene(scene);
 
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &Game::updateScene);
     timer->start(16); // 60 FPS
+
+    //   PlatformGeneratorTimer = new QTimer();
+//    PlatformGeneratorTimer->setInterval(2000);
+//   connect(PlatformGeneratorTimer, &QTimer::timeout, this, &Game::addPlatform);
+//  PlatformGeneratorTimer->start();
+
 }
 
 void Game::updateScene() {
