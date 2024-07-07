@@ -1,28 +1,23 @@
-#include "Platform.h"
+#include "platform.h"
 
-Platform::Platform(int SceneWidth, int SceneHeight, QObject *parent)
-        : BodyObject(), QGraphicsPixmapItem(), QObject(parent){
-    QPixmap pixmap(":/images/platform");
-    pixmap = pixmap.scaled(pixmap.width() , SceneHeight , Qt::KeepAspectRatioByExpanding);
+Platform::Platform(const QPixmap &pixmap, QGraphicsItem *parent)
+        : QGraphicsPixmapItem(pixmap, parent) {}
 
-    auto bottomPlatformHeight = pixmap.height() - (0);
-    auto bottomPlatform = pixmap.copy(0 , 0 , pixmap.width() , bottomPlatformHeight);
+bool Platform::isOnPlatform(QGraphicsItem *object, Platform *platform) {
+    qreal gravity = 9.8;
 
+    QRectF objectRect = object->boundingRect();
+    QRectF platformRect = platform->boundingRect();
 
-    setPixmap(pixmap);
-    setPos(SceneWidth , 0);
+    qreal objectBottom = object->pos().y() + objectRect.height();
+    qreal platformTop = platform->pos().y();
 
-    moveAnimator = new QPropertyAnimation(this , "x");
-    moveAnimator->setStartValue(SceneWidth);
-    moveAnimator->setEndValue(-1 * pixmap.width());
-    moveAnimator->setDuration(3000);
-    moveAnimator->start();
-}
+    if (objectBottom <= platformTop &&
+        objectBottom + gravity >= platformTop &&
+        object->pos().x() + objectRect.width() >= platform->pos().x() &&
+        object->pos().x() <= platform->pos().x() + platformRect.width()) {
+        return true;
+    }
 
-void Platform::removePlatform(){
-
-}
-
-Platform::~Platform() {
-    delete moveAnimator;
+    return false;
 }

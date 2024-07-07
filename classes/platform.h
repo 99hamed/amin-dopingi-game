@@ -1,28 +1,17 @@
 #ifndef PLATFORM_H
 #define PLATFORM_H
 
-#include "BodyObject.h"
 #include <QGraphicsPixmapItem>
-#include <QPropertyAnimation>
-#include <QObject>
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QPixmap>
+#include <QWidget>
 
-class Platform : public BodyObject , public QGraphicsPixmapItem , public QObject {
-Q_OBJECT
-    Q_PROPERTY(qreal x READ x WRITE setX)
-
-
-private:
-    QPropertyAnimation* moveAnimator;
-
+class Platform : public QGraphicsPixmapItem {
 public:
-    Platform(int SceneWidth, int SceneHeight, QObject *parent = nullptr);
-    ~Platform();
+    Platform(const QPixmap &pixmap, QGraphicsItem *parent = nullptr);
 
-public slots:
-
-    void removePlatform();
-
-
+    static bool isOnPlatform(QGraphicsItem *object, Platform *platform);
 };
 
 #endif // PLATFORM_H
