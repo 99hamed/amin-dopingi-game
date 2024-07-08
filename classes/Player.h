@@ -17,7 +17,7 @@ Q_OBJECT
 
     Q_PROPERTY(qreal width READ x WRITE setX)
     Q_PROPERTY(qreal height READ y WRITE setY)
-private:
+public:
     int ground{};
     int Rframe{};
     int Lframe{};
@@ -31,7 +31,6 @@ private:
     QPropertyAnimation* heightAnimator;
     bool running{false};
 
-public:
     int speed;
     Position velocity;
 
@@ -47,6 +46,7 @@ public:
     void handleUpMovement();
 
     void handleDownMovement();
+    ~Player();
 
 
     void draw(QGraphicsScene &scene) override;

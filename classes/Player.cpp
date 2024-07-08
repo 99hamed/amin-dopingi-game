@@ -25,7 +25,7 @@ Player::Player(int width, int height, QGraphicsItem* parent) :sceneheight(height
 
     auto x = 100;
     auto y = height / 2 - scaledpixmap.height() / 2;
-    ground = height - 200;
+    ground = height-200 ;
     widthAnimator = new QPropertyAnimation(this, "width", this);
     heightAnimator = new QPropertyAnimation(this, "height", this);
 
@@ -291,4 +291,14 @@ void Player::RunRightFrame() {
     moveRightFrames.append(new QPixmap(R29));
     auto R30=scaledpixmap.copy((scaledpixmap.width()/29.9)*29,0,scaledpixmap.width()/29.9,scaledpixmap.height());
     moveRightFrames.append(new QPixmap(R30));
+}
+Player::~Player(){
+    delete runningrighttimer;
+    delete runninglefttimer;
+    qDeleteAll(moveLeftFrames);
+    qDeleteAll(moveRightFrames);
+    delete heightAnimator;
+    delete widthAnimator;
+
+
 }
