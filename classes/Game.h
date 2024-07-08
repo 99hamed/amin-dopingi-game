@@ -25,12 +25,14 @@ Q_OBJECT
     //Platform *platform;
     std::vector<Platform*> platforms;
 
+    int targetDistance; // مسافت مورد نظر برای برنده شدن
 
 public:
     Game();
 
 public slots:
     void updateScene();
+    void resetGame();
 };
 
 #endif // GAME_H
