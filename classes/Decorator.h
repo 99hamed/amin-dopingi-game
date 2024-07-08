@@ -35,4 +35,3 @@ public:
 };
 
 #endif //AMIN_DOPINGI_GAME_DECORATOR_H
-
