@@ -23,13 +23,13 @@ Game::Game() {
     scene->addItem(player);
 
     QPixmap platformPixmap(":/resources/images/platform.png");
-    int initialX = 200;
+    int initialX = 0;
     int initialY = QWidget::height() - 125;
-    int platformGap = 800; // فاصله بین پلتفرم‌ها
+    int platformGap = 750;
 
     targetDistance = 5000;
 
-    // ایجاد چند پلتفرم
+
     for (int i = 0; i < 50; ++i) {
         Platform* platform = new Platform(platformPixmap);
         platform->setPos(initialX + i * platformGap, initialY);
@@ -37,7 +37,7 @@ Game::Game() {
         scene->addItem(platform);
     }
 
-    // تنظیم موقعیت بازیکن روی اولین پلتفرم
+
     player->setPos(initialX, initialY - player->boundingRect().height());
 
     setScene(scene);
