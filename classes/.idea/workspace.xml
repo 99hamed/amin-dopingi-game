@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ba22aacf-0daa-479a-b5e9-2c86c21e3aa5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BodyObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BodyObject.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BodyObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/BodyObject.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decorator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Decorator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Position.h" beforeDir="false" afterPath="$PROJECT_DIR$/Position.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/platform.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform.h" beforeDir="false" afterPath="$PROJECT_DIR$/platform.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-37f6b233e25cdcc75675.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/index-2024-06-30T12-11-14-0979.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/target-amin_dopingi_game-Debug-856a06d1eb04d061c0c4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/amin_dopingi_game_autogen/mocs_compilation.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/amin_dopingi_game_autogen/mocs_compilation.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/classes/BodyObject.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/classes/BodyObject.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/classes/Decorator.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/classes/Decorator.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/classes/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/classes/Game.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/classes/Platform.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/classes/Platform.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/classes/Position.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/classes/Position.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen.dir/AutogenInfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen.dir/ParseCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/d/01a51105d15a228ea1d6debf2982a28f40a1a6457417f44e7c6e82e820491474.d" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/d/01a51105d15a228ea1d6debf2982a28f40a1a6457417f44e7c6e82e820491474.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/amin_dopingi_game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/amin_dopingi_game.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/amin_dopingi_game_autogen/deps" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/amin_dopingi_game_autogen/deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/amin_dopingi_game_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/amin_dopingi_game_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/../resources.qrc" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="1.1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2ihaqxFfaTjUilKSzGvzAmCmKIv" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Hamed/Desktop/amin-dopingi-game",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba22aacf-0daa-479a-b5e9-2c86c21e3aa5" name="Changes" comment="" />
+      <created>1719945458221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719945458221</updated>
+      <workItem from="1719945460182" duration="7000" />
+      <workItem from="1719945472678" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

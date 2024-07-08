@@ -19,7 +19,7 @@ public:
     }
 
     BodyObject();
-    ~BodyObject();
+
     virtual void draw(QGraphicsScene &scene) = 0;
     Position getpos();
     void setpos(Position);
