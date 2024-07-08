@@ -29,7 +29,7 @@ Game::Game() {
     QPixmap platformPixmap(":/resources/images/platform.png");
     int initialX = 200;
     int initialY = QWidget::height() - 125;
-    int platformGap = 300; // فاصله بین پلتفرم‌ها
+    int platformGap = 800; // فاصله بین پلتفرم‌ها
 
     // ایجاد چند پلتفرم
     for (int i = 0; i < 5; ++i) {
