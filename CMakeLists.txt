@@ -25,6 +25,8 @@ add_executable(amin_dopingi_game main.cpp resources.qrc
         classes/Player.h
         classes/Decorator.cpp
         classes/Decorator.h
+        classes/platform.cpp
+        classes/platform.h
 )
 target_link_libraries(amin_dopingi_game
         Qt::Core

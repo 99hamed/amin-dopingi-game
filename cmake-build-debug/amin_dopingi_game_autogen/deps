@@ -385,6 +385,7 @@ amin_dopingi_game_autogen/timestamp: \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qxptype_traits.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qyieldcpu.h \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/QKeyEvent \
+	C:/Qt/6.7.2/mingw_64/include/QtGui/QPixmap \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/QTransform \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/qbitmap.h \
@@ -429,6 +430,7 @@ amin_dopingi_game_autogen/timestamp: \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsScene \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsView \
+	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsitem.h \
@@ -586,6 +588,8 @@ amin_dopingi_game_autogen/timestamp: \
 	C:/Users/mamad/CLionProjects/amin-dopingi-game/classes/Player.h \
 	C:/Users/mamad/CLionProjects/amin-dopingi-game/classes/Position.cpp \
 	C:/Users/mamad/CLionProjects/amin-dopingi-game/classes/Position.h \
+	C:/Users/mamad/CLionProjects/amin-dopingi-game/classes/platform.cpp \
+	C:/Users/mamad/CLionProjects/amin-dopingi-game/classes/platform.h \
 	C:/Users/mamad/CLionProjects/amin-dopingi-game/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake \
 	C:/Users/mamad/CLionProjects/amin-dopingi-game/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake \
 	C:/Users/mamad/CLionProjects/amin-dopingi-game/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake \

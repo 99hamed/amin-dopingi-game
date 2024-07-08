@@ -346,6 +346,7 @@ C:/Users/mamad/CLionProjects/amin-dopingi-game/cmake-build-debug/amin_dopingi_ga
   C:/Qt/6.7.2/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qyieldcpu.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QKeyEvent \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/QPixmap \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QTransform \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbitmap.h \
@@ -390,6 +391,7 @@ C:/Users/mamad/CLionProjects/amin-dopingi-game/cmake-build-debug/amin_dopingi_ga
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsScene \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsitem.h \
@@ -402,4 +404,5 @@ C:/Users/mamad/CLionProjects/amin-dopingi-game/cmake-build-debug/amin_dopingi_ga
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qwidget.h \
   C:/Users/mamad/CLionProjects/amin-dopingi-game/classes/BodyObject.h \
-  C:/Users/mamad/CLionProjects/amin-dopingi-game/classes/Position.h
+  C:/Users/mamad/CLionProjects/amin-dopingi-game/classes/Position.h \
+  C:/Users/mamad/CLionProjects/amin-dopingi-game/classes/platform.h
