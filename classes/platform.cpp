@@ -21,4 +21,3 @@ bool Platform::isOnPlatform(QGraphicsItem *object, Platform *platform) {
 
     return false;
 }
-
