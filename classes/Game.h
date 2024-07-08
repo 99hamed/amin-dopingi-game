@@ -22,14 +22,17 @@ Q_OBJECT
     Player* player;
     BackgroundDecorator* background;
     HillDecorator* background2;
-    Platform *platform;
+    //Platform *platform;
+    std::vector<Platform*> platforms;
 
+    int targetDistance; // مسافت مورد نظر برای برنده شدن
 
 public:
     Game();
 
 public slots:
     void updateScene();
+    void resetGame();
 };
 
 #endif // GAME_H

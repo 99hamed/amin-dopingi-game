@@ -97,14 +97,6 @@ build CMakeFiles/amin_dopingi_game.dir/classes/Game.cpp.obj: CXX_COMPILER__amin_
   OBJECT_DIR = CMakeFiles\amin_dopingi_game.dir
   OBJECT_FILE_DIR = CMakeFiles\amin_dopingi_game.dir\classes
 
-build CMakeFiles/amin_dopingi_game.dir/classes/Player.cpp.obj: CXX_COMPILER__amin_dopingi_game_unscanned_Debug C$:/Users/Hamed/Desktop/amin-dopingi-game/classes/Player.cpp || cmake_object_order_depends_target_amin_dopingi_game
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\amin_dopingi_game.dir\classes\Player.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -isystem C:/Users/Hamed/Desktop/amin-dopingi-game/cmake-build-debug/amin_dopingi_game_autogen/include -isystem C:/Qt/6.7.1/mingw_64/include/QtCore -isystem C:/Qt/6.7.1/mingw_64/include -isystem C:/Qt/6.7.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.1/mingw_64/include/QtGui -isystem C:/Qt/6.7.1/mingw_64/include/QtWidgets
-  OBJECT_DIR = CMakeFiles\amin_dopingi_game.dir
-  OBJECT_FILE_DIR = CMakeFiles\amin_dopingi_game.dir\classes
-
 build CMakeFiles/amin_dopingi_game.dir/amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CXX_COMPILER__amin_dopingi_game_unscanned_Debug C$:/Users/Hamed/Desktop/amin-dopingi-game/cmake-build-debug/amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp || cmake_object_order_depends_target_amin_dopingi_game
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\amin_dopingi_game.dir\amin_dopingi_game_autogen\EWIEGA46WW\qrc_resources.cpp.obj.d
@@ -121,7 +113,7 @@ build CMakeFiles/amin_dopingi_game.dir/amin_dopingi_game_autogen/EWIEGA46WW/qrc_
 #############################################
 # Link the executable amin_dopingi_game.exe
 
-build amin_dopingi_game.exe: CXX_EXECUTABLE_LINKER__amin_dopingi_game_Debug CMakeFiles/amin_dopingi_game.dir/amin_dopingi_game_autogen/mocs_compilation.cpp.obj CMakeFiles/amin_dopingi_game.dir/main.cpp.obj CMakeFiles/amin_dopingi_game.dir/classes/Position.cpp.obj CMakeFiles/amin_dopingi_game.dir/classes/BodyObject.cpp.obj CMakeFiles/amin_dopingi_game.dir/classes/Decorator.cpp.obj CMakeFiles/amin_dopingi_game.dir/classes/Game.cpp.obj CMakeFiles/amin_dopingi_game.dir/classes/Player.cpp.obj CMakeFiles/amin_dopingi_game.dir/amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp.obj | C$:/Qt/6.7.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Core.a || amin_dopingi_game_autogen amin_dopingi_game_autogen_timestamp_deps
+build amin_dopingi_game.exe: CXX_EXECUTABLE_LINKER__amin_dopingi_game_Debug CMakeFiles/amin_dopingi_game.dir/amin_dopingi_game_autogen/mocs_compilation.cpp.obj CMakeFiles/amin_dopingi_game.dir/main.cpp.obj CMakeFiles/amin_dopingi_game.dir/classes/Position.cpp.obj CMakeFiles/amin_dopingi_game.dir/classes/BodyObject.cpp.obj CMakeFiles/amin_dopingi_game.dir/classes/Decorator.cpp.obj CMakeFiles/amin_dopingi_game.dir/classes/Game.cpp.obj CMakeFiles/amin_dopingi_game.dir/amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp.obj | C$:/Qt/6.7.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Core.a || amin_dopingi_game_autogen amin_dopingi_game_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/6.7.1/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.7.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.7.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\amin_dopingi_game.dir
@@ -180,7 +172,7 @@ build amin_dopingi_game_autogen/timestamp amin_dopingi_game_autogen/mocs_compila
 #############################################
 # Custom command for amin_dopingi_game_autogen\EWIEGA46WW\qrc_resources.cpp
 
-build amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp: CUSTOM_COMMAND C$:/Users/Hamed/Desktop/amin-dopingi-game/resources.qrc CMakeFiles/amin_dopingi_game_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json C$:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/platform.png C$:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/platformSmallTall.png C$:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/background.png C$:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/spriteRunRight.png C$:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/spriteStandRight.png C$:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/spriteRunLeft.png C$:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/hills.png C$:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/spriteStandLeft.png C$:/Qt/6.7.1/mingw_64/./bin/rcc.exe || amin_dopingi_game_autogen amin_dopingi_game_autogen_timestamp_deps
+build amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}amin_dopingi_game_autogen/EWIEGA46WW/qrc_resources.cpp: CUSTOM_COMMAND C$:/Users/Hamed/Desktop/amin-dopingi-game/resources.qrc CMakeFiles/amin_dopingi_game_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json C$:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/background.png C$:/Users/Hamed/Desktop/amin-dopingi-game/resources/images/hills.png C$:/Qt/6.7.1/mingw_64/./bin/rcc.exe || amin_dopingi_game_autogen amin_dopingi_game_autogen_timestamp_deps
   COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Hamed\Desktop\amin-dopingi-game\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E cmake_autorcc C:/Users/Hamed/Desktop/amin-dopingi-game/cmake-build-debug/CMakeFiles/amin_dopingi_game_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug"
   DESC = Automatic RCC for resources.qrc
   restat = 1

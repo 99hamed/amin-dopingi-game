@@ -1,4 +1,5 @@
 
+#include <QMessageBox>
 #include "Game.h"
 
 Game::Game() {
@@ -21,13 +22,23 @@ Game::Game() {
     player->speed = 30; // player speed
     scene->addItem(player);
 
-           QPixmap platformPixmap(":/resources/images/platform.png");
-            platform = new Platform(platformPixmap);
-            platform->setPos(500,QWidget::height()-125);
-            scene->addItem(platform);
+    QPixmap platformPixmap(":/resources/images/platform.png");
+    int initialX = 200;
+    int initialY = QWidget::height() - 125;
+    int platformGap = 800; // فاصله بین پلتفرم‌ها
 
+    targetDistance = 5000;
 
+    // ایجاد چند پلتفرم
+    for (int i = 0; i < 50; ++i) {
+        Platform* platform = new Platform(platformPixmap);
+        platform->setPos(initialX + i * platformGap, initialY);
+        platforms.push_back(platform);
+        scene->addItem(platform);
+    }
 
+    // تنظیم موقعیت بازیکن روی اولین پلتفرم
+    player->setPos(initialX, initialY - player->boundingRect().height());
 
     setScene(scene);
 
@@ -35,14 +46,24 @@ Game::Game() {
     connect(timer, &QTimer::timeout, this, &Game::updateScene);
     timer->start(16); // 60 FPS
 
-    //   PlatformGeneratorTimer = new QTimer();
-//    PlatformGeneratorTimer->setInterval(2000);
-//   connect(PlatformGeneratorTimer, &QTimer::timeout, this, &Game::addPlatform);
-//  PlatformGeneratorTimer->start();
-
 }
 
 void Game::updateScene() {
+    // Check if player hits the ground
+    if (player->y() + player->boundingRect().height() > QWidget::height()) {
+        // Game over condition
+        QMessageBox::information(nullptr, "Game Over", "You hit the ground!");
+        resetGame();
+        return;
+    }
+
+    // Check if player wins by reaching a certain distance
+    if (player->x() >= targetDistance) {
+        QMessageBox::information(nullptr, "Congratulations", "You won!");
+        resetGame();
+        return;
+    }
+
     int middleX = scene->width() / 2;
     int playerX = player->x();
 
@@ -63,4 +84,17 @@ void Game::updateScene() {
         // Keep the player at the middle
         player->setPos(middleX, player->y());
     }
+}
+
+void Game::resetGame() {
+    // Reset player position
+    player->setPos(200, QWidget::height() - 125 - player->boundingRect().height());
+
+    // Reset scene position
+    scene->setSceneRect(0, 0, QWidget::width(), QWidget::height());
+
+    // Reset any other game state as needed
+
+    // Restart timer
+    timer->start(16); // 60 FPS
 }

@@ -1,3 +1,4 @@
+
 #include <QApplication>
 #include <QPushButton>
 #include "classes/Game.h"
@@ -14,7 +15,5 @@ int main(int argc, char *argv[]) {
 
 
 
-        return QApplication::exec();
-    }
-
-
+    return QApplication::exec();
+}
