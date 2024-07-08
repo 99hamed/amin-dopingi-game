@@ -32,27 +32,34 @@ Game::Game() {
     int platformGap = 800; // فاصله بین پلتفرم‌ها
 
     // ایجاد چند پلتفرم
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 50; ++i) {
         Platform* platform = new Platform(platformPixmap);
         platform->setPos(initialX + i * platformGap, initialY);
         platforms.push_back(platform);
         scene->addItem(platform);
     }
 
+    //QPixmap platformPixmap2(":/resources/images/platformSmallTall.png");
+    //int initialX2 = 200;
+    //int initialY2 = QWidget::height() - 250;
+    //int platformGap2 = 1200; // فاصله بین پلتفرم‌ها
+
+    // ایجاد چند پلتفرم
+    //for (int i = 0; i < 20; ++i) {
+    //    Platform* platform2 = new Platform(platformPixmap2);
+    //    platform2->setPos(initialX2 + i * platformGap2, initialY2);
+    //    platforms.push_back(platform2);
+    //    scene->addItem(platform2);
+    //}
+
     // تنظیم موقعیت بازیکن روی اولین پلتفرم
     player->setPos(initialX, initialY - player->boundingRect().height());
-
 
     setScene(scene);
 
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &Game::updateScene);
     timer->start(16); // 60 FPS
-
-    //   PlatformGeneratorTimer = new QTimer();
-//    PlatformGeneratorTimer->setInterval(2000);
-//   connect(PlatformGeneratorTimer, &QTimer::timeout, this, &Game::addPlatform);
-//  PlatformGeneratorTimer->start();
 
 }
 
