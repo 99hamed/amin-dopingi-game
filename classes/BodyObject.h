@@ -17,7 +17,9 @@ public:
     QGraphicsPixmapItem * getimage(){
         return image;
     }
+
     BodyObject();
+    ~BodyObject();
     virtual void draw(QGraphicsScene &scene) = 0;
     Position getpos();
     void setpos(Position);
